@@ -20,6 +20,71 @@ a{
     align-items: center;
     justify-content: center;
 }
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section-title{
+    font-size: 4rem;
+    margin-bottom: 50px;
+    font-weight: 400px;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    text-align: center;
+}
+.section-title span{
+    font-size: 4rem;
+    margin-bottom: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    text-align: center;
+    color: crimson;
+}
+p{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    font-weight: 300;
+    text-align: center;
+}
+ .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    border: 3px solid crimson;
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+}
+ .cta:hover{
+    color: white;
+    background-color: crimson; 
+}
+.brand h1{
+    font-size: 3rem;
+    transform: uppercase;
+    color: white;
+}
+.brand h1 span:nth-child(1){
+    color: red;
+}
+.brand h1 span:nth-child(2){
+    color: yellow;
+}
+
+.brand h1 span:nth-child(3){
+    color: blue;
+}
+
+
 /*Hero section start*/
 #hero{
     background-image: url(./Colorful-Circle-Simple-Background-Image-1.jpg);
@@ -99,9 +164,239 @@ a{
 }
 #hero .cta:hover{
     color: white;
-    background-color: crimson;
+    background-color: crimson; 
 }
 /*Hero section ends*/
+
+/*Project section starts*/
+#projects .projects{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+   
+}
+#projects .projects-header h1{
+    margin-bottom: 50px;
+}
+
+#projects .all-projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#projects .project-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+       
+}
+#projects .project-info{
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    color: white;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: linear-gradient(60deg,rgb(9, 9, 32),midnightblue);
+}
+#projects .project-info h2{
+    font-size: 3rem;
+    font-weight: 500;
+}
+#projects .project-info h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+#projects .project-img img{
+    width: 100%;
+}
+#projects .project-img{
+    
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+#projects .project-img::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg,rgb(9, 9, 32),midnightblue);
+    opacity: .6;
+}
+#projects .project-img img{
+    transition: .3 ease transform;
+}
+#projects .project-item:hover .project-img img{
+    transform: scale(1.1);
+}
+
+
+
+/*Project seciton ends*/
+
+
+/*About section starts*/
+#about .about{
+    display: flex;
+    flex-direction: column;
+   
+}
+#about .col-left{
+    width: 250px;
+    height: 350px;
+}
+#about .col-right{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#about .col-right h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+
+#about .col-right p{
+    margin-bottom: 20px;
+}
+#about .col-right .cta{
+    color: black;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+#about  .col-left .about-img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 10px solid white;
+}
+
+#about  .col-left .about-img::after{
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid crimson;
+    z-index: -1;
+}
+
+/*About section ends*/
+
+/*Contact section start*/
+#contact .contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+} 
+#contact .contact-items{
+    width: 250px;
+    padding: 20px;
+}
+#contact .contact-item{
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 0px 0px 18px 0 black;
+}
+#contact .contact-item:hover{
+    box-shadow: 0px 0px 5px 0 black;
+    transition: .3s ease box-shadow;
+}
+
+#contact .icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+#contact .contact-info h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/*Contact section end*/
+
+/*Footer section start*/
+#footer{
+    color: white;
+    background-image: linear-gradient(60deg,rgb(9, 9, 32),midnightblue);
+}
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+#footer h2{
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;
+}
+#footer .social-item{
+    height: 40px;
+    width: 40px;
+    margin-bottom: 0 5px;
+}
+#footer .social-item img{
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+#footer .social-item:hover img{
+    filter: grayscale(0);
+}
+#footer p{
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+/*Footer section end*/
+
 /*keyframes*/
 @keyframes text_reveal_box{
     50%{
@@ -126,48 +421,16 @@ a{
 }
 /*keyframes ends*/
 
-/*Project section starts*/
-#projects .projects{
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-    max-width: 1200px;
-    margin: auto;
-    padding: 100px;
-   
+/*Media Query for tablet start*/
+@media only screen and(min-width: 768px){
+    .cta {
+        font-size: 3rem;
+        padding: 20px 60px;
+
+    }
+    .section-title{
+        font-size: 10rem;
+    }
 }
+/*Media Query for tablet end*/
 
-#projects .project-info{
-    padding: 30px;
-    flex-basis: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-image: linear-gradient(60deg,gray,lightgray);
-}
-#projects .project-img{
-    display: flex;
-    justify-content: center;
-    flex: 1;
-
-}
-
-
-#projects .project-item{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-   width: 100%;
-   overflow: hidden;
-    margin-bottom: 30px;
-       
-}
-.section-title{
-    font-size: 4rem;
-    margin: 50px;
-}
-
-
-/*Project seciton ends*/
