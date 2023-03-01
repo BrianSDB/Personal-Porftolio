@@ -1,7 +1,6 @@
 const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
 const mobile = document.querySelector('.header .nav-bar .nav-list ul');
 const menuItem = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
-const contactItem=document.querySelector('form');
 const header = document.querySelector('.header.container');
 
 hamburger.addEventListener('click',()=>{
@@ -20,9 +19,3 @@ document.addEventListener('scroll',()=>{
 
 })
 
-
-contactItem.forEach(item=>{
-    item.addEventListener('click', ()=>{
-        mobile.classList.toggle('active');
-    })
-})
